@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "dalli-ui"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.authors     = ["Pete Hawkins"]
   s.email       = ["pete@phawk.co.uk"]
   s.homepage    = "https://github.com/phawk/dalli-ui"

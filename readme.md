@@ -1,5 +1,7 @@
 # Dalli UI
 
+[ ![Codeship Status for phawk/dalli-ui](https://codeship.io/projects/97682f30-2dfb-0132-c2b8-5e5bd29e6176/status)](https://codeship.io/projects/39299)
+
 Dalli UI is a mountable engine for Rails apps that displays information about your [dalli](https://github.com/mperham/dalli) memcached instance and allows you to flush it from a web interface.
 
 ![Dalli UI Sample](./docs/sample.png)
