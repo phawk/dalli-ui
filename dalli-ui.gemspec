@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
   s.require_paths = ["lib"]
 
-  s.add_dependency "rails", "~> 4.1.6"
+  s.add_dependency "rails", "> 4.0"
   s.add_dependency "dalli", "~> 2.7"
   s.add_dependency "hashie", "~> 3.3.1"
 
