@@ -1,0 +1,27 @@
+# Dalli UI
+
+Dalli UI is a mountable engine for Rails apps that displays information about your [dalli](https://github.com/mperham/dalli) memcached instance and allows you to flush it from a web interface.
+
+## Rails 4 installation
+
+Add **dalli** and **dalli-ui** to your gemfile and `bundle install`.
+
+```rb
+# Gemfile
+gem 'dalli'
+gem 'dalli-ui'
+```
+
+Setup [dalli](https://github.com/mperham/dalli) as your Rails cache store.
+
+```rb
+# config/application.rb
+config.cache_store = :dalli_store
+```
+
+Mount Dalli UI on a route of your choosing
+
+```rb
+# config/routes.rb
+mount Dalli::Ui::Engine, at: "dalli"
+```

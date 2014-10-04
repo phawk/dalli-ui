@@ -1,0 +1,53 @@
+<% @stats.each do |host, stats| %>
+  <div class="page-header">
+    <h1><%= host %> <small>Stats</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <canvas id="hit_rate_chart_<%= stats.host_id(host) %>"></canvas>
+    </div>
+
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table">
+          <tr>
+            <th>Memcached instance size</th>
+            <td><%= stats.cache_size %></td>
+          </tr>
+          <tr>
+            <th>Hit rate</th>
+            <td><%= stats.hit_rate %>%</td>
+          </tr>
+          <tr>
+            <th>Total items</th>
+            <td><%= stats.dalli.total_items %></td>
+          </tr>
+          <tr>
+            <th>Current Connections</th>
+            <td><%= stats.dalli.curr_connections %></td>
+          </tr>
+          <tr>
+            <th>Total Connections</th>
+            <td><%= stats.dalli.total_connections %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        var chart_context = document.getElementById("hit_rate_chart_<%= stats.host_id(host) %>").getContext("2d");
+
+        var data = <%== MultiJson.dump(stats.chart_data) %>;
+
+        var hit_rate_chart = new Chart(chart_context).Doughnut(data, {
+            responsive: true,
+            tooltipTemplate: "<%%if (label){%><%%=label%>: <%%}%><%%= value %>%",
+        });
+    });
+  </script>
+<% end %>

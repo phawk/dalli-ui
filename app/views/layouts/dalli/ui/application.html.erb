@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dalli UI</title>
+
+  <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    "dalli/ui/application", media: "all" %>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1-beta.2/Chart.min.js"></script>
+  <%= javascript_include_tag "dalli/ui/application" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Dalli UI</a>
+      </div>
+
+      <form action="<%= dalli_ui_flush_path %>" method="POST" class="navbar-form navbar-right">
+        <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+        <input type="submit" value="Flush cache!" class="btn btn-danger">
+      </form>
+
+    </div><!-- /.container -->
+  </nav>
+
+  <% if flash[:dalli_ui_notice] %>
+    <div class="ui-notification"><p><%= flash[:dalli_ui_notice] %></p></div>
+  <% end %>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+</body>
+</html>
