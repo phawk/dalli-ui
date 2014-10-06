@@ -29,3 +29,14 @@ Mount Dalli UI on a route of your choosing
 # config/routes.rb
 mount Dalli::Ui::Engine, at: "dalli"
 ```
+
+In a production environment you probably don't want to allow just anyone to access this page.
+
+Authentication example with [Devise](https://github.com/plataformatec/devise) that ensures that the user is an admin:
+
+```rb
+# config/routes.rb
+authenticate :user, lambda { |u| u.admin? } do
+  mount Dalli::Ui::Engine, at: "dalli"
+end
+```
