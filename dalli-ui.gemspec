@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = "Dalli UI is a mountable engine for Rails apps that displays information about your dalli (https://github.com/mperham/dalli) memcached instance and allows you to flush it from a web interface."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "readme.md"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "readme.md", ".yardopts"]
   s.test_files = Dir["test/**/*"]
   s.require_paths = ["lib"]
 
