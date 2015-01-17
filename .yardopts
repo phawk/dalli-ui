@@ -2,5 +2,6 @@
 --protected
 --markup-provider=redcarpet
 --markup=markdown
---readme readme.md lib/**/*.rb
-- MIT-LICENSE
+--asset images:images
+-
+MIT-LICENSE
