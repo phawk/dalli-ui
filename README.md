@@ -1,8 +1,6 @@
 # Dalli UI
 
-[![Gem Version](https://badge.fury.io/rb/dalli-ui.svg)](http://badge.fury.io/rb/dalli-ui)
-
-[ ![Codeship Status for phawk/dalli-ui](https://codeship.io/projects/97682f30-2dfb-0132-c2b8-5e5bd29e6176/status)](https://codeship.io/projects/39299)
+[![Build Status](https://travis-ci.org/phawk/dalli-ui.svg?branch=master)](https://travis-ci.org/phawk/dalli-ui) [![Gem Version](https://badge.fury.io/rb/dalli-ui.svg)](http://badge.fury.io/rb/dalli-ui)
 
 Dalli UI is a mountable engine for Rails apps that displays information about your [dalli](https://github.com/mperham/dalli) memcached instance and allows you to flush it from a web interface.
 
