@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'multi_json'
 require 'dalli/ui/stats_presenter'
 
 describe Dalli::Ui::StatsPresenter, :view do
