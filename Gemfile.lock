@@ -4,6 +4,7 @@ PATH
     dalli-ui (0.1.2)
       dalli (~> 2.7)
       hashie (~> 3.4)
+      multi_json (~> 1.11)
       rails (~> 4.2)
 
 GEM
@@ -121,7 +122,6 @@ DEPENDENCIES
   github-markup
   minitest-rails
   minitest-rg
-  multi_json
   redcarpet
   sqlite3
   yard

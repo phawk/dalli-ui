@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2"
   s.add_dependency "dalli", "~> 2.7"
   s.add_dependency "hashie", "~> 3.4"
+  s.add_dependency "multi_json", "~> 1.11"
 
   s.add_development_dependency "redcarpet"
   s.add_development_dependency "github-markup"
@@ -25,5 +26,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "minitest-rails"
   s.add_development_dependency "minitest-rg"
-  s.add_development_dependency "multi_json"
 end
